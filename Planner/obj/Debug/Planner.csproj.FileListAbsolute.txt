@@ -1,0 +1,10 @@
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\bin\Debug\Planner.exe.config
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\bin\Debug\Planner.exe
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\bin\Debug\Planner.pdb
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\obj\Debug\Planner.csprojResolveAssemblyReference.cache
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\obj\Debug\Planner.AddPlan.resources
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\obj\Debug\Planner.MainForm.resources
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\obj\Debug\Planner.Properties.Resources.resources
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\obj\Debug\Planner.csproj.GenerateResource.Cache
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\obj\Debug\Planner.exe
+C:\Users\16215\Documents\Visual Studio 2017\Projects\CSharpPlanner\Planner\obj\Debug\Planner.pdb
