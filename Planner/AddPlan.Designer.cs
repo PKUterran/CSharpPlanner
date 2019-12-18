@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 44);
+            this.label1.Location = new System.Drawing.Point(29, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 153);
+            this.label2.Location = new System.Drawing.Point(29, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 1;
@@ -59,32 +59,34 @@
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(146, 314);
+            this.confirmButton.Location = new System.Drawing.Point(146, 298);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(75, 23);
             this.confirmButton.TabIndex = 2;
             this.confirmButton.Text = "确认";
             this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(243, 314);
+            this.cancelButton.Location = new System.Drawing.Point(243, 298);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "取消";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // titleTextBox
             // 
-            this.titleTextBox.Location = new System.Drawing.Point(87, 41);
+            this.titleTextBox.Location = new System.Drawing.Point(87, 25);
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.Size = new System.Drawing.Size(231, 21);
             this.titleTextBox.TabIndex = 4;
             // 
             // detailTextBox
             // 
-            this.detailTextBox.Location = new System.Drawing.Point(87, 85);
+            this.detailTextBox.Location = new System.Drawing.Point(87, 69);
             this.detailTextBox.Multiline = true;
             this.detailTextBox.Name = "detailTextBox";
             this.detailTextBox.Size = new System.Drawing.Size(231, 153);
@@ -92,15 +94,16 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(87, 261);
+            this.dateTimePicker.Location = new System.Drawing.Point(87, 245);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(163, 21);
             this.dateTimePicker.TabIndex = 6;
+            this.dateTimePicker.Value = new System.DateTime(2019, 12, 18, 17, 33, 57, 0);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 267);
+            this.label3.Location = new System.Drawing.Point(29, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 7;
@@ -109,7 +112,7 @@
             // immediateCheckBox
             // 
             this.immediateCheckBox.AutoSize = true;
-            this.immediateCheckBox.Location = new System.Drawing.Point(270, 266);
+            this.immediateCheckBox.Location = new System.Drawing.Point(270, 250);
             this.immediateCheckBox.Name = "immediateCheckBox";
             this.immediateCheckBox.Size = new System.Drawing.Size(48, 16);
             this.immediateCheckBox.TabIndex = 9;
@@ -134,7 +137,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddPlan";
-            this.Text = "AddPlan";
+            this.Text = "添加Plan";
             this.ResumeLayout(false);
             this.PerformLayout();
 

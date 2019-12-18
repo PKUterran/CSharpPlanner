@@ -34,13 +34,13 @@
             this.unfinishedListBox = new System.Windows.Forms.ListBox();
             this.finishedTabPage = new System.Windows.Forms.TabPage();
             this.finishedListBox = new System.Windows.Forms.ListBox();
+            this.finishButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.ddlTextBox = new System.Windows.Forms.TextBox();
             this.detailTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,7 +54,6 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -63,16 +62,15 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button5);
-            this.splitContainer1.Panel2.Controls.Add(this.button4);
-            this.splitContainer1.Panel2.Controls.Add(this.button3);
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.finishButton);
+            this.splitContainer1.Panel2.Controls.Add(this.exitButton);
+            this.splitContainer1.Panel2.Controls.Add(this.removeButton);
+            this.splitContainer1.Panel2.Controls.Add(this.editButton);
+            this.splitContainer1.Panel2.Controls.Add(this.addButton);
             this.splitContainer1.Panel2.Controls.Add(this.ddlTextBox);
             this.splitContainer1.Panel2.Controls.Add(this.detailTextBox);
-            this.splitContainer1.Size = new System.Drawing.Size(908, 551);
-            this.splitContainer1.SplitterDistance = 302;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(681, 441);
+            this.splitContainer1.SplitterDistance = 226;
             this.splitContainer1.TabIndex = 0;
             // 
             // tabControl
@@ -81,22 +79,20 @@
             this.tabControl.Controls.Add(this.finishedTabPage);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(302, 551);
+            this.tabControl.Size = new System.Drawing.Size(226, 441);
             this.tabControl.TabIndex = 0;
             this.tabControl.Tag = "";
-            this.tabControl.TabIndexChanged += new System.EventHandler(this.Control_TabIndexChanged);
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.Control_SelectedIndexChanged);
             // 
             // unfinishedTabPage
             // 
             this.unfinishedTabPage.Controls.Add(this.unfinishedListBox);
-            this.unfinishedTabPage.Location = new System.Drawing.Point(4, 25);
-            this.unfinishedTabPage.Margin = new System.Windows.Forms.Padding(4);
+            this.unfinishedTabPage.Location = new System.Drawing.Point(4, 22);
             this.unfinishedTabPage.Name = "unfinishedTabPage";
-            this.unfinishedTabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.unfinishedTabPage.Size = new System.Drawing.Size(294, 522);
+            this.unfinishedTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.unfinishedTabPage.Size = new System.Drawing.Size(218, 415);
             this.unfinishedTabPage.TabIndex = 0;
             this.unfinishedTabPage.Text = "未完成";
             this.unfinishedTabPage.UseVisualStyleBackColor = true;
@@ -105,22 +101,20 @@
             // 
             this.unfinishedListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.unfinishedListBox.FormattingEnabled = true;
-            this.unfinishedListBox.ItemHeight = 15;
-            this.unfinishedListBox.Location = new System.Drawing.Point(4, 4);
-            this.unfinishedListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.unfinishedListBox.ItemHeight = 12;
+            this.unfinishedListBox.Location = new System.Drawing.Point(3, 3);
             this.unfinishedListBox.Name = "unfinishedListBox";
-            this.unfinishedListBox.Size = new System.Drawing.Size(286, 514);
+            this.unfinishedListBox.Size = new System.Drawing.Size(212, 409);
             this.unfinishedListBox.TabIndex = 0;
             this.unfinishedListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
             // finishedTabPage
             // 
             this.finishedTabPage.Controls.Add(this.finishedListBox);
-            this.finishedTabPage.Location = new System.Drawing.Point(4, 25);
-            this.finishedTabPage.Margin = new System.Windows.Forms.Padding(4);
+            this.finishedTabPage.Location = new System.Drawing.Point(4, 22);
             this.finishedTabPage.Name = "finishedTabPage";
-            this.finishedTabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.finishedTabPage.Size = new System.Drawing.Size(294, 522);
+            this.finishedTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.finishedTabPage.Size = new System.Drawing.Size(218, 415);
             this.finishedTabPage.TabIndex = 1;
             this.finishedTabPage.Text = "已完成";
             this.finishedTabPage.UseVisualStyleBackColor = true;
@@ -129,83 +123,90 @@
             // 
             this.finishedListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.finishedListBox.FormattingEnabled = true;
-            this.finishedListBox.ItemHeight = 15;
-            this.finishedListBox.Location = new System.Drawing.Point(4, 4);
-            this.finishedListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.finishedListBox.ItemHeight = 12;
+            this.finishedListBox.Location = new System.Drawing.Point(3, 3);
             this.finishedListBox.Name = "finishedListBox";
-            this.finishedListBox.Size = new System.Drawing.Size(286, 514);
+            this.finishedListBox.Size = new System.Drawing.Size(212, 409);
             this.finishedListBox.TabIndex = 1;
             this.finishedListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
+            // finishButton
+            // 
+            this.finishButton.Location = new System.Drawing.Point(271, 407);
+            this.finishButton.Margin = new System.Windows.Forms.Padding(2);
+            this.finishButton.Name = "finishButton";
+            this.finishButton.Size = new System.Drawing.Size(89, 24);
+            this.finishButton.TabIndex = 6;
+            this.finishButton.Text = "标记完成";
+            this.finishButton.UseVisualStyleBackColor = true;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
+            // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(386, 407);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(56, 24);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.Text = "退出";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // removeButton
+            // 
+            this.removeButton.Enabled = false;
+            this.removeButton.Location = new System.Drawing.Point(186, 407);
+            this.removeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(56, 24);
+            this.removeButton.TabIndex = 4;
+            this.removeButton.Text = "删除";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(101, 407);
+            this.editButton.Margin = new System.Windows.Forms.Padding(2);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(56, 24);
+            this.editButton.TabIndex = 3;
+            this.editButton.Text = "编辑";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(12, 407);
+            this.addButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(56, 24);
+            this.addButton.TabIndex = 2;
+            this.addButton.Text = "添加";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
             // ddlTextBox
             // 
-            this.ddlTextBox.Location = new System.Drawing.Point(3, 476);
-            this.ddlTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlTextBox.Location = new System.Drawing.Point(2, 381);
             this.ddlTextBox.Name = "ddlTextBox";
-            this.ddlTextBox.Size = new System.Drawing.Size(592, 25);
+            this.ddlTextBox.Size = new System.Drawing.Size(445, 21);
             this.ddlTextBox.TabIndex = 1;
             // 
             // detailTextBox
             // 
-            this.detailTextBox.Location = new System.Drawing.Point(4, 4);
-            this.detailTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.detailTextBox.Location = new System.Drawing.Point(3, 3);
             this.detailTextBox.Multiline = true;
             this.detailTextBox.Name = "detailTextBox";
-            this.detailTextBox.Size = new System.Drawing.Size(591, 440);
+            this.detailTextBox.Size = new System.Drawing.Size(444, 353);
             this.detailTextBox.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 516);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(148, 516);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(272, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(514, 516);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(398, 516);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 551);
+            this.ClientSize = new System.Drawing.Size(681, 441);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -230,11 +231,11 @@
         private System.Windows.Forms.TextBox ddlTextBox;
         private System.Windows.Forms.TextBox detailTextBox;
         private System.Windows.Forms.ListBox finishedListBox;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button finishButton;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button removeButton;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button addButton;
     }
 }
 

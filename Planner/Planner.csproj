@@ -69,6 +69,9 @@
     <EmbeddedResource Include="AddPlan.resx">
       <DependentUpon>AddPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditPlan.resx">
+      <DependentUpon>EditPlan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

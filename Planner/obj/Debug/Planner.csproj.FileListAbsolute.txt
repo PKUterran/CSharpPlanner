@@ -18,3 +18,5 @@ E:\CSharpProjects\CSharpPlanner\Planner\obj\Debug\Planner.Properties.Resources.r
 E:\CSharpProjects\CSharpPlanner\Planner\obj\Debug\Planner.csproj.GenerateResource.cache
 E:\CSharpProjects\CSharpPlanner\Planner\obj\Debug\Planner.exe
 E:\CSharpProjects\CSharpPlanner\Planner\obj\Debug\Planner.pdb
+E:\CSharpProjects\CSharpPlanner\Planner\obj\Debug\Planner.csproj.CoreCompileInputs.cache
+E:\CSharpProjects\CSharpPlanner\Planner\obj\Debug\Planner.EditPlan.resources

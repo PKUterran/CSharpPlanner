@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planner
 {
-    class Plan
+    public class Plan
     {
         public string token;
         public string Title;
