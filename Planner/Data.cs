@@ -8,12 +8,12 @@ namespace Planner
 {
     class Plan
     {
-        string token;
-        string Title;
-        string Detail;
-        DateTime Date;
-        bool Immediate;
-        bool Finished;
+        public string token;
+        public string Title;
+        public string Detail;
+        public DateTime Date;
+        public bool Immediate;
+        public bool Finished;
         public Plan(string title, string detail, DateTime date, bool immediate)
         {
             token = title + ":" + GetTimeStamp();
@@ -29,7 +29,12 @@ namespace Planner
             Finished = finished;
         }
 
-        public string GetTimeStamp()
+        public new string ToString()
+        {
+            return Title;
+        }
+
+        public static string GetTimeStamp()
         {
             TimeSpan ts = DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0, 0);
             return Convert.ToInt64(ts.TotalSeconds).ToString();
@@ -47,6 +52,10 @@ namespace Planner
             Plan plan2 = new Plan("线代考试", "一教102", DateTime.Parse("2019.4.23"), true);
             Plan plan3 = new Plan("哈哈哈", "呵呵呵", DateTime.Parse("2019.4.20"), false);
             plan3.SetFinished(true);
+            plans.Add(plan0);
+            plans.Add(plan1);
+            plans.Add(plan2);
+            plans.Add(plan3);
             return plans;
         }
 
@@ -58,6 +67,11 @@ namespace Planner
         public static void EditPlan(Plan plan)
         {
             // TODO: 修改Plan的内容；提供的参数plan的token在数据库中已存在
+        }
+
+        public static void RemovePlan(Plan plan)
+        {
+            // TODO: 删除Plan；提供的参数plan的token在数据库中已存在
         }
 
         public static void SetPlanFinished(string token, bool finished)
